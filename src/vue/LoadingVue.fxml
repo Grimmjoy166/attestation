@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="rootPane" prefHeight="232.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoadingController">
+   <children>
+      <ImageView fitHeight="371.0" fitWidth="859.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/loadingBackground.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" fontSmoothingType="LCD" opacity="0.93" stroke="#eb1010" strokeType="OUTSIDE" text="جاري التحميل ...">
+         <font>
+            <Font name="Angsana New Bold Italic" size="57.0" />
+         </font>
+      </Text>
+   </children>
+</StackPane>

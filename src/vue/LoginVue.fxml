@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="830.0" style="-fx-background-color: #2D3442; -fx-background-radius: 1.8em;" styleClass="LgRoot" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <HBox fx:id="mTopBar" prefHeight="19.0" prefWidth="830.0" spacing="5.0" styleClass="topBar">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <ImageView fx:id="loginMinimiseBtn" fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minus-sign.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="loginCloseBtn" fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close_2.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <ImageView fitHeight="154.0" fitWidth="296.0" layoutX="338.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/loginLogo.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="username" alignment="BASELINE_LEFT" layoutX="249.0" layoutY="222.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="361.0" promptText="البريد الالكتروني" styleClass="loginTextField" unFocusColor="#903535">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </JFXTextField>
+      <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="627.0" layoutY="236.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="30.0" layoutX="627.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <JFXPasswordField fx:id="password" alignment="BASELINE_LEFT" layoutX="255.0" layoutY="280.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="37.0" prefWidth="361.0" promptText="كلمة المرور" styleClass="loginTextField" unFocusColor="#903535">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </JFXPasswordField>
+      <JFXCheckBox fx:id="rememberMe" layoutX="532.0" layoutY="359.0" nodeOrientation="RIGHT_TO_LEFT" text="تدكرني" textFill="#c6c6c6">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="281.0" layoutY="350.0" prefHeight="37.0" prefWidth="161.0" ripplerFill="#c95959" style="-fx-background-color: #ff4d4d;" text="تسجيل الدخول" textFill="#d7d7d7">
+         <font>
+            <Font name="Arial Bold Italic" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="usernameError" layoutX="108.0" layoutY="243.0" text="البريد الإلكتروني غير صحيح" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="passwordError" layoutX="109.0" layoutY="301.0" text="كلمة المرور غير صحيحة" textFill="RED" visible="false">
+         <font>
+            <Font name="Arial Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

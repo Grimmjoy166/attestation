@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="AttestationReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf4c4ec8-74e1-463c-bdec-ae772cfe7b51">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nomComplet" class="java.lang.String"/>
+	<parameter name="lieu" class="java.lang.String"/>
+	<parameter name="dateNaissance" class="java.lang.String"/>
+	<parameter name="numInscription" class="java.lang.String"/>
+	<parameter name="cne" class="java.lang.String"/>
+	<parameter name="niveau" class="java.lang.String"/>
+	<parameter name="dateSortie" class="java.lang.String"/>
+	<parameter name="decision" class="java.lang.String"/>
+	<parameter name="nomResponsable" class="java.lang.String"/>
+	<parameter name="nomEtablissement" class="java.lang.String"/>
+	<parameter name="ville" class="java.lang.String"/>
+	<parameter name="codeEtablissement" class="java.lang.String"/>
+	<parameter name="telephone" class="java.lang.String"/>
+	<parameter name="code" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nomComplet" class="java.lang.String"/>
+	<field name="lieu" class="java.lang.String"/>
+	<field name="dateNaissance" class="java.util.Date"/>
+	<field name="numInscription" class="java.lang.String"/>
+	<field name="cne" class="java.lang.String"/>
+	<field name="niveau" class="java.lang.String"/>
+	<field name="dateSortie" class="java.util.Date"/>
+	<field name="decision" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="167" splitType="Stretch">
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="234" y="-15" width="335" height="82" uuid="cc2d4a12-d3ce-4e19-a017-36fc5899dea3"/>
+				<imageExpression><![CDATA["src/images/ministre_education_maroc.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="302" y="48" width="220" height="20" uuid="0421cda5-7585-4633-8925-d8cb9b52ad84"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الأكاديمية الجهوية للتربية والتكوين ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="61" width="158" height="21" uuid="e1c74b1b-7d3c-4b44-b593-cd1fac2ff3d9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[جهة : مراكش اسفي]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-13" y="-6" width="147" height="22" uuid="354302be-7e14-4ba3-8587-de2e9e8bb947"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomEtablissement}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="76" width="87" height="17" uuid="2e425202-e82d-4d26-955c-328009a82eb4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[مديرية : الحوز]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="-5" width="91" height="22" uuid="a143f7c0-4cab-4ecc-bed8-4010cd8d6aac"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المؤسسة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="16" width="90" height="20" uuid="75f86a35-d20a-4515-a6dc-96d858b1bf11"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[البلدة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="37" width="88" height="18" uuid="0501bdb5-38bc-4e9c-aa80-9af9f661d4be"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[رمز المؤسسة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="56" width="91" height="18" uuid="1f51bbf3-858a-415a-bd51-5983ccb5f251"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الهاتف :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="-13" y="17" width="146" height="19" uuid="da4ecbc6-2687-441f-83f8-56ddee69da0d"/>
+				<textElement textAlignment="Center">
+					<font fontName="ArialAr" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ville}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-13" y="37" width="146" height="18" uuid="34575bb0-aa3b-42ff-9619-d8f9687b93b9"/>
+				<textElement textAlignment="Center">
+					<font fontName="ArialAr" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{codeEtablissement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-12" y="56" width="146" height="18" uuid="ea8bc622-87a1-42d7-9ae1-15c36a4b830e"/>
+				<textElement textAlignment="Center">
+					<font fontName="ArialAr" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{telephone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="112" width="133" height="44" uuid="71ec6f68-540c-47e5-931b-3cb70cf3e0c9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="31" isBold="true" isItalic="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="302" y="112" width="220" height="44" uuid="04c60456-dcde-4c39-842b-6af00a56ab26"/>
+				<textElement>
+					<font fontName="ArialAr" size="31" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[شهادة مدرسيــة  :]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="635" splitType="Stretch">
+			<staticText>
+				<reportElement x="382" y="20" width="138" height="30" uuid="25879767-b3aa-4682-81dc-1d31758e2fdb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ يشهد الموقع أسفله السيد   :        ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="51" width="102" height="30" uuid="18ea4fbb-03b6-42ba-ada1-91a9c7f9ab32"/>
+				<textElement>
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  بصفته       : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="93" width="87" height="30" uuid="7dea93ad-0c89-44c9-b592-d807eb42d2cf"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[أن التلميذ(ة)  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="128" width="87" height="30" uuid="1a81c5a2-47b3-4639-b354-e9122c5f9c01"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المولـود(ة) ب : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="127" width="49" height="30" uuid="a48e7e76-d6f0-4926-8af4-1e1336e6ede4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[بتـاريـخ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="433" y="183" width="87" height="30" uuid="a7b9bc92-d180-4161-a21d-109701c82d5f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[المسجل تحت رقم :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="181" width="66" height="30" uuid="234aeeb0-4448-4191-b008-f586c5181113"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[الرقم الوطني :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="232" width="145" height="30" uuid="c462c31d-97ae-40ef-b4f7-5a7a7f26cc06"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  كان(ت) يتابع دراسته(ها) ب :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="273" width="143" height="30" uuid="05ad20de-fe87-4f68-bf8d-4b57e8c1f87f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ وقد غادر(ت) المؤسسة بتاريخ : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="372" width="270" height="30" uuid="20d464b9-e0f8-4fe8-a227-40a548b6c75d"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineColor="rgba(150, 150, 150, 0.91764706)"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+					<paragraph lineSpacing="Single" lineSpacingSize="1.0" spacingBefore="0" spacingAfter="0"/>
+				</textElement>
+				<text><![CDATA[ملاحظـات :  سلمـت   هذه  الشهادة  لأغــراض  إداريــة    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="413" width="48" height="22" uuid="dc07514d-0703-4119-879c-82d56c7b1b5f"/>
+				<textElement>
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[حرر ب]]></text>
+			</staticText>
+			<textField pattern="dd/MM/ yyyy">
+				<reportElement x="180" y="413" width="100" height="25" uuid="51e47a14-413f-4158-9659-e14dd9b39c26"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="59" y="459" width="100" height="30" uuid="659f12d4-a76e-4bae-a20b-1be51abec53e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[توقيع السيد المدير]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="604" width="257" height="30" uuid="c37ee32d-f679-4ea5-9b24-b2d724cc9c1b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[هذه الشهادة لا تخول التسجيل في مؤسسة أخرى  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="604" width="74" height="30" uuid="ffc47c40-0739-4935-8863-10b27bbed370"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ملحوظة : ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="166" y="93" width="260" height="30" uuid="ea73eb4a-62ce-4f90-8b2e-6c5b2b1f76ed"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomComplet}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="276" y="128" width="150" height="30" uuid="1bd7a147-0689-49ea-be8f-5865745509d4"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{lieu}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="127" width="100" height="30" uuid="11145d96-e7f5-4155-8dfa-e02b53331e3b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="284" y="182" width="142" height="30" uuid="3bf27022-3504-4528-8e0f-b59748ee94ba"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numInscription}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="-12" y="181" width="190" height="30" uuid="5604b324-936c-4974-bb1a-d12dd1bc7ba8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cne}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="104" y="232" width="258" height="30" uuid="5bbaa8db-ecd6-486f-92f3-bcd1d70fda3e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{niveau}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="215" y="272" width="136" height="30" uuid="f82dd92e-5a72-4bfd-8b3d-8639f7cdb59c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateSortie}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="257" y="309" width="132" height="30" uuid="3082e22d-5137-4d2f-aab6-4f1ce498fa27"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{decision}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="222" y="20" width="155" height="30" uuid="3f94d183-bf4d-4b5f-960c-dbd1f8a33df1"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomResponsable}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="376" y="309" width="144" height="30" uuid="8dbc80c1-5f03-44d2-950a-3a0d05189afc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ سبب المغادرة :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="413" width="31" height="24" uuid="b7b3227c-74b6-4877-b5cf-efd34bf4c261"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[في :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="318" y="413" width="48" height="23" uuid="20f8e1ff-d1d2-4b04-b480-01b0072688cd"/>
+				<textElement textAlignment="Right">
+					<font fontName="ArialAr" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ville}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="222" y="50" width="156" height="30" uuid="458945b0-26f2-4a51-918c-c9ee06d5674b"/>
+				<textElement textAlignment="Right">
+					<font fontName="ArialAr" size="12"/>
+				</textElement>
+				<text><![CDATA[مديرا]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

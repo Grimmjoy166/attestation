@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mCenter" nodeOrientation="RIGHT_TO_LEFT" prefHeight="728.0" prefWidth="1244.0" styleClass="mainContainer" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EtudiantController">
+   <children>
+      <Group VBox.vgrow="ALWAYS">
+         <children>
+            <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="328.0" prefWidth="1263.0" spacing="50.0">
+               <children>
+                  <GridPane hgap="20.0" prefHeight="308.0" prefWidth="748.0" vgap="20.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="10.0" prefWidth="268.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="10.0" prefWidth="268.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXTextField fx:id="nomComplet" alignment="CENTER" focusColor="#ee3333" labelFloat="true" prefWidth="232.0" promptText=" الاسم الكامل">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="numInscription" alignment="CENTER" focusColor="#ee3333" labelFloat="true" prefWidth="232.0" promptText=" رقم التسجيل" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="lieu" alignment="CENTER" focusColor="#ee3333" labelFloat="true" prefWidth="232.0" promptText=" مكان الازدياد" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="numDossier" alignment="CENTER" focusColor="#ee3333" labelFloat="true" prefWidth="232.0" promptText=" رقم الملف" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="cne" alignment="CENTER" focusColor="#ee3333" labelFloat="true" prefWidth="232.0" promptText=" الرقم الوطني" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="niveau" alignment="CENTER" focusColor="#ee3333" labelFloat="true" prefWidth="232.0" promptText=" المستوى الدراسي" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </JFXTextField>
+                        <VBox GridPane.rowIndex="1">
+                           <children>
+                              <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="تاريخ الازدياد">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="date" defaultColor="#e13636" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="185.0" />
+                           </children>
+                        </VBox>
+                        <JFXComboBox fx:id="decision" focusColor="#ff4658" labelFloat="true" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="29.0" prefWidth="185.0" promptText="قرار مجلس القسم" unFocusColor="#2f2a2a" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXComboBox fx:id="etablissement" disable="true" editable="true" focusColor="#ff4658" labelFloat="true" maxWidth="1.7976931348623157E308" prefHeight="29.0" prefWidth="185.0" promptText="المؤسسة" unFocusColor="#2f2a2a" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="3.0" prefWidth="185.0" styleClass="mLabel" text="تاريخ المغادرة ">
+                                 <padding>
+                                    <Insets top="-1.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="dateSortie" defaultColor="#e13636" maxWidth="1.7976931348623157E308" prefHeight="23.0" prefWidth="185.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+                  <VBox prefHeight="308.0" prefWidth="191.0" spacing="10.0">
+                     <children>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveAction" prefHeight="25.0" prefWidth="73.0" styleClass="record-sales" text="اضف" />
+                        <Button layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateAction" prefHeight="25.0" prefWidth="72.0" styleClass="record-sales" text="تغيير" />
+                        <Button layoutX="20.0" layoutY="72.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteAction" prefHeight="42.0" prefWidth="151.0" styleClass="record-sales" text="حدف" />
+                        <Region VBox.vgrow="ALWAYS" />
+                        <Button fx:id="importeFileBtn" layoutX="20.0" layoutY="124.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#importeFile" prefHeight="42.0" prefWidth="151.0" styleClass="record-sales" text="إضافة من ملف" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Group>
+      <HBox alignment="CENTER_RIGHT" prefHeight="102.0" prefWidth="1263.0">
+         <children>
+            <JFXTextField fx:id="nom" alignment="CENTER" focusColor="#da2e4b" labelFloat="true" prefHeight="25.0" prefWidth="521.0" promptText="البحث عن تلميذ" unFocusColor="#3022d0" />
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="mTable" editable="true" nodeOrientation="RIGHT_TO_LEFT">
+         <columns>
+            <TableColumn fx:id="numInscriptionColumn" prefWidth="90.0" text="رقم التسجيل" />
+            <TableColumn fx:id="nomCompletColumn" minWidth="60.0" prefWidth="164.0" text="الاسم الكامل" />
+            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="102.0" text="تاريخ الازدياد" />
+            <TableColumn fx:id="lieuColumn" minWidth="0.0" prefWidth="107.0" text="مكان الازدياد" />
+            <TableColumn fx:id="cneColumn" prefWidth="135.0" text="الرقم الوطني" />
+            <TableColumn fx:id="niveauColumn" prefWidth="156.0" text="المستوى الدراسي" />
+            <TableColumn fx:id="decisionColumn" prefWidth="128.0" text="قرار مجلس القسم" />
+            <TableColumn fx:id="numDossierColumn" prefWidth="128.0" text="رقم الملف" />
+            <TableColumn fx:id="dateSortieColumn" prefWidth="128.0" text="تاريخ المغادرة" />
+            <TableColumn fx:id="etablissementColumn" prefWidth="128.0" text="المؤسسة" />
+         </columns>
+      </TableView>
+   </children>
+</VBox>

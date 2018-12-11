@@ -1,0 +1,161 @@
+.root{
+    -fx-background-color: #ffffff;
+}
+.LgRoot{
+    -fx-background-color: transparent;
+}
+.mLabel{
+    -fx-text-fill: black;
+    -fx-font-size : 1.2em;
+    -fx-font-weight: bold;
+    -fx-font-family: "Lucida Console, Monaco, monospace";
+}
+.topBar {
+    -fx-background-color:  #1e232d;
+}
+.menu{
+    -fx-background-color:  #2D3442;
+}
+.header{
+    -fx-background-color:  #2D3442;
+}
+.headerText{
+     -fx-text-fill: white;
+}
+
+.mainContainer{
+    -fx-background-color : #e8e8e8;
+}
+.mCostum_field{
+    -fx-border-radius: 0;
+}
+
+.record-sales {
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+.record-sales:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+.record-sales:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.record-sales Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}
+
+.menuBtn:hover{
+    -fx-background-color: #ff8533;
+    -fx-cursor: hand;
+}
+
+.menuBtn:active{
+    -fx-background-color: #ff8533;
+}
+
+#logOutBtn {
+    -fx-cursor: hand;
+}
+#logOutBtn:hover,#userName:hover,#userEmail:hover,#headerText:hover{
+    -fx-text-fill: #cc760a;
+}
+
+.menuBtn:pressed{
+    -fx-background-color: #955050;
+    -fx-fill: #ffffff;
+    -fx-border-style: solid;
+}
+
+.tickets{
+    -fx-background-color : #ffffff;
+    -fx-background-radius : 2.5em;
+}
+
+.tickets:hover{
+    -fx-background-color: #ada19a;
+}
+
+.loginTextField {
+    -fx-text-fill : #ffffff;
+    -fx-prompt-text-fill : #e0e0eb;
+    -fx-font-weight: bold;
+}
+
+#employeNameLabel {
+    -fx-text-fill : #ff8533;
+    -fx-font-weight : bold;
+    -fx-font-size : 1.3em;
+}
+
+#btnLogin {
+    -fx-font-weight : bold;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header {
+ -fx-font-weight: bold;
+   -fx-background-color: #2D3442;
+}
+
+.table-view .column-header .text {
+  -fx-underline: true;
+  -fx-font-size : 21px;
+  -fx-fill: #ffffff;
+}
+
+.table-cell {
+    -fx-alignment: BASELINE_CENTER;
+ }
+ 
+ .table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #ff8533;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+.table-view:focused .table-row-cell:filled:selected {
+    -fx-background-color: #BCD4E5;
+    -fx-background-insets: 0.0, 0.0 0.0 0.0 0.0;
+    -fx-text-fill: -fx-selection-bar-text;
+    -fx-table-cell-border-color: #E0F2FF;
+}
+
+.table-view .text{
+ -fx-font-size: 18px;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0.0;
+    -fx-background-insets: 0.0;
+    -fx-padding: 0.0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow, 
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0.0;
+    -fx-background-insets: 0.0;
+    -fx-padding: 0.0;
+    -fx-shape: null;
+}
+
+.progress-indicator .percentage {
+    -fx-fill: #ffffff;
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="268.0" maxWidth="520.0" minHeight="208.0" minWidth="520.0" prefHeight="218.0" prefWidth="520.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProgressController">
+   <children>
+      <HBox fx:id="mTopBar" alignment="CENTER_RIGHT" layoutY="-2.0" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="520.0" spacing="5.0" style="-fx-background-color: #1e232d;">
+         <children>
+            <ImageView fx:id="exitBarBtn" fitHeight="10.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close_2.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </HBox>
+      <VBox layoutY="24.0" prefHeight="188.0" prefWidth="520.0" style="-fx-background-color: #2D3442;" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <AnchorPane prefHeight="156.0" prefWidth="520.0">
+               <children>
+                  <Separator layoutY="168.0" prefHeight="0.0" prefWidth="520.0" />
+                  <ProgressBar fx:id="mProgress" layoutX="60.0" layoutY="66.0" prefHeight="47.0" prefWidth="392.0" progress="0.0" />
+                  <Label fx:id="mMessage" alignment="CENTER" layoutX="60.0" layoutY="39.0" prefHeight="17.0" prefWidth="392.0" textFill="WHITE" />
+                  <Label layoutX="194.0" layoutY="130.0" lineSpacing="5.0" text="جاري تحميل البيانات ..." textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <ProgressIndicator fx:id="mIndicator" layoutX="460.0" layoutY="67.0" prefHeight="47.0" prefWidth="44.0" progress="0.0" style="-fx-fill: white;" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
