@@ -20,26 +20,27 @@ import util.HibernateUtil;
  *
  * @author Sinponzakra
  */
-public class AttestationService  implements IDao<Attestation> {
+public class AttestationService implements IDao<Attestation> {
 
     private static SessionFactory sessionFactory;
-    
-    public AttestationService(){
+
+    public AttestationService() {
         Configuration configuration = new Configuration();
         Preferences userPreferences = Preferences.userRoot();
 
         configuration.configure("/config/hibernate.cfg.xml");
-        
-        System.out.println("URL BEFORE : "+configuration.getProperty("hibernate.connection.url"));
+
+        System.out.println("URL BEFORE : " + configuration.getProperty("hibernate.connection.url"));
         configuration.setProperty("hibernate.connection.url", userPreferences.get("DB_URL", "NULL"));
         configuration.setProperty("hibernate.connection.username", userPreferences.get("DB_USERNAME", "NULL"));
         configuration.setProperty("hibernate.connection.password", userPreferences.get("DB_PASSWORD", "NULL"));
-        
-        System.out.println("URL AFTER : "+configuration.getProperty("hibernate.connection.url"));
-    
+
+        System.out.println("URL AFTER : " + configuration.getProperty("hibernate.connection.url"));
+
         sessionFactory = configuration.buildSessionFactory();
 
     }
+
     @Override
     public boolean create(Attestation o) {
         Session session = sessionFactory.openSession();
@@ -58,15 +59,22 @@ public class AttestationService  implements IDao<Attestation> {
             return false;
         }
     }
-    
-    
+
     public Attestation createWithFeedBack(Attestation o) {
         Session session = sessionFactory.openSession();
         Transaction tx = null;
-        tx = session.beginTransaction();
-        session.save(o);
-        tx.commit();
-        session.close();
+
+        try {
+            tx = session.beginTransaction();
+            session.save(o);
+            tx.commit();
+            session.close();
+        } catch (HibernateException e) {
+            if (tx != null) {
+                tx.rollback();
+                session.close();
+            }
+        }
         return o;
     }
 
@@ -150,7 +158,7 @@ public class AttestationService  implements IDao<Attestation> {
         }
 
     }
-    
+
     public int getAttestationsCount() {
         int count = 0;
         Session session = sessionFactory.openSession();
@@ -169,8 +177,8 @@ public class AttestationService  implements IDao<Attestation> {
             return count;
         }
     }
-    
-     public int getLastInsertedYear() {
+
+    public int getLastInsertedYear() {
         int year = 0;
         Session session = sessionFactory.openSession();
         Transaction tx = null;
@@ -189,8 +197,5 @@ public class AttestationService  implements IDao<Attestation> {
         }
 
     }
-    
 
 }
-
-
