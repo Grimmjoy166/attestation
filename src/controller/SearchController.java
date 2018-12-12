@@ -13,6 +13,7 @@ import beans.Etudiant;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
@@ -191,15 +192,19 @@ public class SearchController implements Initializable {
                 
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 
-                Attestation attestationCreated = as.createWithFeedBack(new Attestation(new AttestationPK(new Date(), currentEmploye.getId(), item.getId()), currentEmploye, item));
-               
-                if(userPreferences.getInt("nextNumero", -1) != -1){
-                  userPreferences.putInt("nextNumero", attestationCreated.getNumero()+1);
-                } else if(as.getLastInsertedYear() != new Date().getYear()) {
+                int res = userPreferences.getInt("nextNumero", -1);
+                if(res != -1){
+                    int next = userPreferences.getInt("nextNumero", -1) + 1;
+                    System.out.println("----------------------next1 = " +next);
+                    userPreferences.putInt("nextNumero", next);
+                } else if(as.getLastInsertedYear() != new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getYear()) {
                   userPreferences.remove("nextNumero");
                 } else {
                   userPreferences.putInt("nextNumero", 1);
                 }
+                
+                Attestation attestationCreated = as.createWithFeedBack(new Attestation(new AttestationPK(new Date(), currentEmploye.getId(), item.getId()), currentEmploye, item));
+
                 
                 JasperReport jr = JasperCompileManager.compileReport("src/report/HorizontalAttestationReport.jrxml");
                 Map<String, Object> parameters = new HashMap<String, Object>();
